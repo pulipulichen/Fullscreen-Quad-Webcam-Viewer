@@ -1,0 +1,9 @@
+<div class="WebcamVideo"
+:style="computedWebcamStyle">
+  <video autoplay
+    :class="computedVideoClass"
+    ref="Video"
+    @mousemove="hideCursor"
+    :style="computedStyle"
+    @click.self="toggleFullscreen"></video>
+</div>

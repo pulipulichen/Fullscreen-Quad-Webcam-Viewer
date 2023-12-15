@@ -19,7 +19,9 @@ let app = {
     'db.config.videoSelectedTrackDevicesIDs' () {
       // console.log(this.db.config.videoSelectedTrackIndex)
       // console.log(this.db.config.videoObject)
-      this.init()
+      setTimeout(() => {
+        this.init()
+      }, 1000)
     },
   },
   computed: {
@@ -76,6 +78,7 @@ let app = {
       let video = this.$refs.Video
       video.srcObject = videoObject
       // video = track
+      console.log(inputID, track.getSettings)
       
       if (track.getSettings) {
         let {width, height} = track.getSettings()

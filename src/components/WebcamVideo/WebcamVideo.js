@@ -62,7 +62,7 @@ let app = {
       // let index = this.db.config.videoSelectedTrackIndex
       // let track = this.db.config.videoObject.getTracks()[index];
       let inputID = Number(this.input_id)
-      if (this.db.config.videoSelectedTrackDevicesIDs.length <= inputID) {
+      if (this.db.config.videoSelectedTrackDevicesIDs.length < inputID) {
         return false
       }
       let deviceId = this.db.config.videoSelectedTrackDevicesIDs[inputID]

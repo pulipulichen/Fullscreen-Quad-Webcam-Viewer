@@ -137,14 +137,14 @@ let Index = {
             this.db.config.videoSelectedTrackDevicesIDs.push(track.deviceId)
             this.db.config.videoSelectedTrackIndexes.push(this.db.config.videoTrackLabels.length)
           }
-          else if (track.label.indexOf('Camera') > -1) {
-            continue
-          }
-          else if (track.kind === 'videoinput' && this.db.config.videoSelectedTrackIndex === -1) {
-            this.db.config.videoSelectedTracks.push(track.label)
-            this.db.config.videoSelectedTrackDevicesIDs.push(track.deviceId)
-            this.db.config.videoSelectedTrackIndexes.push(this.db.config.videoTrackLabels.length)
-          }
+          // else if (track.label.indexOf('Camera') > -1) {
+          //   continue
+          // }
+          // else if (track.kind === 'videoinput' && this.db.config.videoSelectedTrackIndex === -1) {
+          //   this.db.config.videoSelectedTracks.push(track.label)
+          //   this.db.config.videoSelectedTrackDevicesIDs.push(track.deviceId)
+          //   this.db.config.videoSelectedTrackIndexes.push(this.db.config.videoTrackLabels.length)
+          // }
           if (track.label !== '') {
             this.db.config.videoTrackLabels.push(track.label)
           }

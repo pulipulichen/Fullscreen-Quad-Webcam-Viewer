@@ -21,7 +21,7 @@ let app = {
       // console.log(this.db.config.videoObject)
       setTimeout(() => {
         this.init()
-      }, 1000)
+      }, (1000 + (1000 * this.inputID)))
     },
   },
   computed: {
@@ -46,6 +46,9 @@ let app = {
       if (inputID % 2 === 1) {
         return {right: 0}
       }
+    },
+    inputID () {
+      return Number(this.input_id)
     }
   },
   mounted() {
@@ -56,15 +59,23 @@ let app = {
   },
   methods: {
     init: async function () {
+      let inputID = this.inputID
+      console.log(inputID)
+
       // console.log(this.db.config.videoObject, this.$refs.Video)
       if (!this.$refs.Video || this.db.config.videoSelectedTrackDevicesIDs.length === 0 ) {
-        return false
+        console.log(inputID, 'wait...')
+        return setTimeout(() => {
+          this.init()
+        }, 3000)
+        // return false
       }
 
       // let index = this.db.config.videoSelectedTrackIndex
       // let track = this.db.config.videoObject.getTracks()[index];
-      let inputID = Number(this.input_id)
+      
       if (this.db.config.videoSelectedTrackDevicesIDs.length < inputID) {
+        console.log(inputID, 'not found', this.db.config.videoSelectedTrackDevicesIDs.length, inputID)
         return false
       }
       let deviceId = this.db.config.videoSelectedTrackDevicesIDs[inputID]
@@ -72,7 +83,18 @@ let app = {
       console.log(this.db.config.videoSelectedTrackDevicesIDs)
       console.log(this.input_id, deviceId, this.db.config.videoSelectedTrackDevicesIDs.length)
 
-      let videoObject = await navigator.mediaDevices.getUserMedia({ video: { deviceId, width: 9999 } })
+      let videoObject
+      try {
+        let constraints = {video: {deviceId, width: 1280, height: 720, frameRate: { ideal: 20, max: 30 }}};
+        videoObject = await navigator.mediaDevices.getUserMedia(constraints)
+      }
+      catch (e) {
+        console.error(e)
+        return setTimeout(() => {
+          this.init()
+        }, 3000)
+      }
+        
       let track = videoObject.getTracks()[0]
       // console.log(track, this.db.config.videoSelectedTrackDevicesID)
       let video = this.$refs.Video
@@ -96,7 +118,7 @@ let app = {
       }
       await new Promise(resolve => video.onloadedmetadata = resolve);
       // playAudioFromUSB()
-      console.log(`${video.videoWidth}x${video.videoHeight}`);
+      console.log(inputID,`${video.videoWidth}x${video.videoHeight}`);
     },
     toggleFullscreen (e) {
       if (document.fullscreenElement) {

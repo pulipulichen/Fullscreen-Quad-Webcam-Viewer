@@ -112,7 +112,7 @@ let Index = {
       try {
         //let constraints = {video: {width: 9999}};
         // let constraints = {video: true, audio: true};
-        let constraints = {video: {width: 9999}};
+        let constraints = {video: {width: 1280, height: 720, frameRate: { ideal: 20, max: 30 }}};
         this.db.config.videoObject = await navigator.mediaDevices.getUserMedia(constraints);
         this.db.config.videoDevices = await navigator.mediaDevices.enumerateDevices()
         //let tracks = this.db.config.videoObject.getTracks();

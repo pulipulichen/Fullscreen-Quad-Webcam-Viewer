@@ -85,7 +85,7 @@ let app = {
 
       let videoObject
       try {
-        let constraints = {video: {deviceId, width: 1280, height: 720, frameRate: { ideal: 20, max: 30 }}};
+        let constraints = this.db.config.videoConstraints
         videoObject = await navigator.mediaDevices.getUserMedia(constraints)
       }
       catch (e) {

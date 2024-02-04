@@ -11,7 +11,7 @@ let config = {
 
   powerShellCommand: `iex ((New-Object System.Net.WebClient).DownloadString('https://pulipulichen.github.io/Fullscreen-Webcam-Viewer/assets/share-network.ps1'))`,
 
-  videoConstraints: {video: {width: 1280, height: 720, frameRate: { ideal: 45, max: 60 }}},
+  videoConstraints: {video: {width: 1280, height: 720, frameRate: { ideal: 20, max: 30 }}},
 
   videoObject: null,
   videoDevices: null,

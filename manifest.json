@@ -1,10 +1,10 @@
 {
-  "name": "Now Loading",
-  "short_name": "Now Loading",
+  "name": "Qual Webcam",
+  "short_name": "Qual Webcam",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#E1F7F7",
-  "description": "A PWA to display \"Now Loading\" screen.",
+  "description": "A PWA to display four webcams in a webpage.",
   "icons": [{
     "src": "assets/favicon/favicon.png",
     "sizes": "512x512",

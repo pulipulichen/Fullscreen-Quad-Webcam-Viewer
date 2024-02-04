@@ -85,7 +85,7 @@ let app = {
 
       let videoObject
       try {
-        let constraints = this.db.config.videoConstraints
+        let constraints = JSON.parse(JSON.stringify(this.db.config.videoConstraints))
         constraints.deviceId = deviceId
         console.log(this.input_id, {constraints}) 
         videoObject = await navigator.mediaDevices.getUserMedia(constraints)

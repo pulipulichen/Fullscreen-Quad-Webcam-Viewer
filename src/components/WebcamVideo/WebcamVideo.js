@@ -60,7 +60,7 @@ let app = {
   methods: {
     init: async function () {
       let inputID = this.inputID
-      console.log(inputID)
+      console.log({inputID})
 
       // console.log(this.db.config.videoObject, this.$refs.Video)
       if (!this.$refs.Video || this.db.config.videoSelectedTrackDevicesIDs.length === 0 ) {

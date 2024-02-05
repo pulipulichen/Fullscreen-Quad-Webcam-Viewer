@@ -73,7 +73,8 @@ let Index = {
 
     setTimeout(() => {
       location.reload()
-    }, 10000)
+    }, 30000) 
+    // okok
 
   },
   methods: {

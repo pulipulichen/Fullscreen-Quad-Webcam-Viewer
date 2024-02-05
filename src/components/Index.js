@@ -165,6 +165,10 @@ let Index = {
         console.log(this.db.config.videoSelectedTracks)
         console.log(this.db.config.videoSelectedTrackDevicesIDs)
 
+        setTimeout(() => {
+          location.reload()
+        }, 30000)
+
       } catch(e) {
         console.log(e);
       }

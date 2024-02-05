@@ -5,3 +5,5 @@ rem Your script's commands go here
 popd & rem Restore the original working directory
 
 git pull
+
+start "" startup.bat

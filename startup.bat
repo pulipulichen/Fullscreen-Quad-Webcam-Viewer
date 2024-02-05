@@ -3,6 +3,7 @@ REM start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" --kiosk "ht
 REM start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" --kiosk "C:\Users\pulip\Downloads\Fullscreen Qual Webcam Viewer.html"
 
 start "" "C:\Users\pulip\Downloads\x86_64-pc-windows-msvc-simple-http-server.exe"
-start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" --kiosk "http://localhost:8000/Fullscreen-Quad-Webcam-Viewer/index.html#/"
+timeout /t 3 /nobreak > nul
+start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" --kiosk "http://localhost:8000/Fullscreen-Quad-Webcam-Viewer/index.html"
 
 exit

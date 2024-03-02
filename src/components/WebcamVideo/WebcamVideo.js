@@ -123,6 +123,10 @@ let app = {
       console.log(inputID,`${video.videoWidth}x${video.videoHeight}`);
     },
     toggleFullscreen (e) {
+      console.log('close')
+      window.close()
+      return false
+
       if (document.fullscreenElement) {
         if (document.exitFullscreen) {
           document.exitFullscreen();

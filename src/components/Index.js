@@ -91,6 +91,7 @@ let Index = {
     },
 
     toggleFullScreen() {
+      return window.close()
       if (!document.fullscreenElement) {
         if (document.documentElement.requestFullscreen) {
           document.documentElement.requestFullscreen();

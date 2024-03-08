@@ -17,7 +17,7 @@ cd "$(dirname "$0")"
 cd ..
 
 # pwd
-http-server "$1"
+http-server &
 # sh -c 'cd "$(dirname "$1")" && exec pwd && http-server'
 
 google-chrome-stable --kiosk http://localhost:8080/

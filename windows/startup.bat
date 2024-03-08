@@ -4,7 +4,7 @@ REM start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" --kiosk "C:
 
 pushd "%~dp0.." & rem Change working directory to the parent folder
 
-start "" "windows\x86_64-pc-windows-msvc-simple-http-server.exe"
+start /B "" "windows\x86_64-pc-windows-msvc-simple-http-server.exe"
 timeout /t 10 /nobreak > nul
 "C:\Program Files\Google\Chrome\Application\chrome.exe" --kiosk "http://localhost:8000/index.html"
 

@@ -20,4 +20,6 @@ cd ..
 http-server &
 # sh -c 'cd "$(dirname "$1")" && exec pwd && http-server'
 
+sleep 30
+
 google-chrome-stable --kiosk http://localhost:8080/

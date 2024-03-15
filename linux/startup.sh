@@ -26,7 +26,8 @@ http-server &
 
 sleep 120
 
-google-chrome-stable --kiosk http://localhost:8080/ &
+#google-chrome-stable --kiosk http://localhost:8080/ &
+firefox --kiosk http://localhost:8080/ &
 
 sleep 30
 

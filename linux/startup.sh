@@ -12,8 +12,8 @@ if ! command -v http-server &> /dev/null; then
   sudo npm install -g http-server
 fi
 
-if ! command -v http-server &> /dev/null; then
-  sudo npm install -g http-server
+if ! command -v xdotool &> /dev/null; then
+  sudo apt install xdotool -y
 fi
 
 
@@ -24,9 +24,9 @@ cd ..
 http-server &
 # sh -c 'cd "$(dirname "$1")" && exec pwd && http-server'
 
-sleep 30
+sleep 120
 
-#google-chrome-stable --kiosk http://localhost:8080/
+#google-chrome-stable --kiosk http://localhost:8080/ &
 firefox --kiosk http://localhost:8080/ &
 
 sleep 30

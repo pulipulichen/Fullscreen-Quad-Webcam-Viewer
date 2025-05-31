@@ -42,4 +42,4 @@ fi
 
 sleep 30
 
-xdotool mousemove 10 10
+xdotool mousemove 50 50

@@ -29,7 +29,7 @@ cd ..
 cd ..
 
 # pwd
-http-server -p 18080 &
+http-server -p 18080 ./../ &
 # sh -c 'cd "$(dirname "$1")" && exec pwd && http-server'
 
 sleep 10

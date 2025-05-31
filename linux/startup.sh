@@ -1,8 +1,10 @@
 #!/bin/bash
 
+cd "$(dirname "$0")"
+
 git pull
 
-cd "$(dirname "$0")"
+sudo pkill http-server
 
 ./vlc.sh
 

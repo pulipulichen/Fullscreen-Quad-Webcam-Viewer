@@ -28,7 +28,7 @@ cd ..
 http-server -p 18080 &
 # sh -c 'cd "$(dirname "$1")" && exec pwd && http-server'
 
-sleep 120
+sleep 10
 
 #google-chrome-stable --kiosk http://localhost:8080/ &
 BROWSER=""
@@ -44,6 +44,6 @@ else
   echo "Neither firefox nor firefox-esr found. Please install one of them."
 fi
 
-sleep 30
+sleep 10
 
 xdotool mousemove 50 50

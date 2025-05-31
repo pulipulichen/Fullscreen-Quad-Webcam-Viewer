@@ -1,5 +1,9 @@
 #!/bin/bash
 
+cd "$(dirname "$0")"
+
+./vlc.sh
+
 if ! command -v node &> /dev/null; then
   # Node.js
   curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - &&\
@@ -17,7 +21,7 @@ if ! command -v xdotool &> /dev/null; then
 fi
 
 
-cd "$(dirname "$0")"
+
 cd ..
 
 # pwd

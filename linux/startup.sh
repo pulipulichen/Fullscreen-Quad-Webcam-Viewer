@@ -24,6 +24,7 @@ fi
 
 cd "$(dirname "$0")"
 cd ..
+cd ..
 
 # pwd
 http-server -p 18080 &

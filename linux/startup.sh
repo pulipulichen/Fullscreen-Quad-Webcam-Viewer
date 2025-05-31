@@ -21,7 +21,7 @@ cd "$(dirname "$0")"
 cd ..
 
 # pwd
-http-server &
+http-server -p 18080 &
 # sh -c 'cd "$(dirname "$1")" && exec pwd && http-server'
 
 sleep 120
@@ -35,7 +35,7 @@ elif command -v firefox-esr &> /dev/null; then
 fi
 
 if [ -n "$BROWSER" ]; then
-  "$BROWSER" --kiosk http://localhost:8080/ &
+  "$BROWSER" --kiosk http://localhost:18080/ &
 else
   echo "Neither firefox nor firefox-esr found. Please install one of them."
 fi

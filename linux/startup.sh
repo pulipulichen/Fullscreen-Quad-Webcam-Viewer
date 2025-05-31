@@ -2,7 +2,7 @@
 
 cd "$(dirname "$0")"
 
-git pull
+# git pull
 
 sudo pkill http-server
 

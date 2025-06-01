@@ -13,4 +13,4 @@ fi
 sudo pkill vlc
 
 # 啟動vlc api
-vlc --intf telnet --telnet-port 4212 --daemon
+vlc -I telnet --telnet-password=password &

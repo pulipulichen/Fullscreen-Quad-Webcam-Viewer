@@ -11,7 +11,7 @@ sudo pkill http-server
 if ! command -v node &> /dev/null; then
   # Node.js
   curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - &&\
-  sudo apt-get install -y nodejs
+  sudo apt-get install -y nodejs npm
 
   sudo npm install -g jshint
 fi

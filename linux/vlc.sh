@@ -10,5 +10,7 @@ else
     echo "VLC is already installed."
 fi
 
+sudo pkill vlc
+
 # 啟動vlc api
 vlc --intf telnet --telnet-port 4212 --daemon

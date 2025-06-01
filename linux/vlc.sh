@@ -10,7 +10,7 @@ else
     echo "VLC is already installed."
 fi
 
-sudo pkill vlc
+# sudo pkill vlc
 
 sleep 3
 

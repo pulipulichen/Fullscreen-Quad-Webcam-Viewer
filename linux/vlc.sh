@@ -11,4 +11,4 @@ else
 fi
 
 # 啟動vlc api
-vlc --intf http --http-port 8080 --daemon
+vlc --intf http --http-port 4212 --daemon

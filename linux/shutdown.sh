@@ -2,4 +2,4 @@
 
 cd "$(dirname "$0")"
 
-node hibernate.js
+node shutdown.js

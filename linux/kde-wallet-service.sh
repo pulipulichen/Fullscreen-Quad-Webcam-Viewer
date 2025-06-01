@@ -1,4 +1,8 @@
 #!/bin/bash
+if ! command -v wmctrl &> /dev/null; then
+  sudo apt-get install -y wmctrl
+fi
+
 sleep 10
 
 while [ -z "$(wmctrl -l | grep 'KDE Wallet Service')" ]; do

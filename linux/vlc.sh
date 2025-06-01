@@ -11,4 +11,4 @@ else
 fi
 
 # 啟動vlc api
-vlc --intf http --http-port 4212 --daemon
+vlc --intf telnet --telnet-port 4212 --daemon

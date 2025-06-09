@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo ethtool -s enp2s0 wol g
+
 cd "$(dirname "$0")"
 
 # git pull

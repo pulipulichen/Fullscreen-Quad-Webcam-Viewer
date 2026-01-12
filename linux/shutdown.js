@@ -34,8 +34,6 @@ const server = http.createServer((req, res) => {
   exec(command, (error, stdout, stderr) => {
     if (error) {
       console.error(`exec error: ${error}`);
-      res.writeHead(500, { 'Content-Type': 'text/plain' });
-      res.end(`Error executing ${actionName}: ${error.message}`);
       return;
     }
     // Note: stderr doesn't always mean failure, but we log it.
@@ -43,9 +41,10 @@ const server = http.createServer((req, res) => {
       console.warn(`stderr: ${stderr}`);
     }
     console.log(`stdout: ${stdout}`);
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
-    res.end(`${actionName} executed successfully\n${stdout}`);
   });
+
+  res.writeHead(200, { 'Content-Type': 'text/plain' });
+  res.end('true');
 });
 
 server.listen(port, () => {

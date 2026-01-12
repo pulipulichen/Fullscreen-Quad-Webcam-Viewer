@@ -23,7 +23,7 @@ const server = http.createServer((req, res) => {
     actionName = 'Restart Firefox';
     // 關閉 firefox 並重新開啟。使用 & 讓它在背景執行，避免阻塞回應。
     // 使用 pkill 確保所有 firefox 實例都被關閉。
-    command = 'pkill firefox; firefox http://localhost:18080 &';
+    command = 'pkill firefox; firefox --kiosk http://localhost:18080/ &';
   } else {
     res.writeHead(404, { 'Content-Type': 'text/plain' });
     res.end('Not Found. Use /shutdown, /reboot, or /reset');
